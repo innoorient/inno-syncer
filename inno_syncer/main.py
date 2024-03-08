@@ -1,6 +1,6 @@
 """Main module."""
 
-from iomete_postgresql_sync import DataSyncer
+from inno_syncer import DataSyncer
 from sync.iomete_logger import init_logger
 
 
