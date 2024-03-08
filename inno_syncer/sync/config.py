@@ -1,12 +1,12 @@
 from dataclasses import dataclass
 from typing import List
 
-from iomete_postgresql_sync.connection.source import SourceConnection
-from iomete_postgresql_sync.connection.source import PostgreSQLConnection
-from iomete_postgresql_sync.connection.mssql import SQLServerConnection
+from inno_syncer.connection.source import SourceConnection
+from inno_syncer.connection.source import PostgreSQLConnection
+from inno_syncer.connection.mssql import SQLServerConnection
 
 
-from iomete_postgresql_sync.sync.sync_mode import SyncMode, FullLoad, IncrementalSnapshot
+from inno_syncer.sync.sync_mode import SyncMode, FullLoad, IncrementalSnapshot
 from pyhocon import ConfigFactory
 
 from sync.utils import table_name_extractor

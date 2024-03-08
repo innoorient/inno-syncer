@@ -4,8 +4,8 @@ from pathlib import Path
 from pyspark.sql import SparkSession
 from pyspark import SparkConf
 
-from iomete_postgresql_sync.main import start_job
-from iomete_postgresql_sync.sync.config import get_config
+from inno_syncer.main import start_job
+from inno_syncer.sync.config import get_config
 
 this_dir = Path().cwd().resolve()
 
