@@ -1,7 +1,7 @@
 """Main module."""
 
 from inno_syncer import DataSyncer
-from sync.iomete_logger import init_logger
+from inno_syncer.sync.iomete_logger import init_logger
 
 
 def start_job(spark, config):

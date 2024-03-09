@@ -1,15 +1,14 @@
 from dataclasses import dataclass
 from typing import List
 
-from inno_syncer.connection.source import SourceConnection
-from inno_syncer.connection.source import PostgreSQLConnection
-from inno_syncer.connection.mssql import SQLServerConnection
-
-
-from inno_syncer.sync.sync_mode import SyncMode, FullLoad, IncrementalSnapshot
 from pyhocon import ConfigFactory
 
-from sync.utils import table_name_extractor
+from inno_syncer.connection.source import SourceConnection
+from inno_syncer.connection.portgresql import PostgreSQLConnection
+from inno_syncer.connection.mssql import SQLServerConnection
+from inno_syncer.connection.mysql import MySQLConnection
+from inno_syncer.sync.sync_mode import SyncMode, FullLoad, IncrementalSnapshot
+from inno_syncer.sync.utils import table_name_extractor
 
 
 @dataclass
@@ -49,7 +48,8 @@ def get_config(application_config_path) -> ApplicationConfig:
 
     __source_mapping = {
         "postgresql": PostgreSQLConnection,
-        "mssql": SQLServerConnection
+        "mssql": SQLServerConnection,
+        "mysql": MySQLConnection
     }
     source_connection = None
     if source_type := __source_mapping.get(config['source_connection']['type']):

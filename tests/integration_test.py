@@ -1,6 +1,6 @@
 from inno_syncer.main import start_job
 from inno_syncer.sync.config import get_config
-from inno_syncer.test._spark_session import get_spark_session
+from _spark_session import get_spark_session
 
 
 def test_postgresql_table_migration():
