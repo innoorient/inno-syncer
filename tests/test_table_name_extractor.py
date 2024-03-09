@@ -1,4 +1,4 @@
-from sync.utils import table_name_extractor
+from inno_syncer.sync.utils import table_name_extractor
 
 
 def test_single_line():
