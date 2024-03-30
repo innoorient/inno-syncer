@@ -1,6 +1,7 @@
-import findspark
 from pathlib import Path
 
+import findspark
+from dotenv import load_dotenv
 from pyspark.sql import SparkSession
 from pyspark import SparkConf
 
@@ -8,7 +9,7 @@ from inno_syncer.main import start_job
 from inno_syncer.sync.config import get_config
 
 this_dir = Path(__file__).parent
-
+load_dotenv(dotenv_path=Path(".env").resolve())
 
 findspark.init()
 
