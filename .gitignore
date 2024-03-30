@@ -18,3 +18,4 @@ metastore_db/
 spark-warehouse
 *.log
 *.tar.gz
+.env
